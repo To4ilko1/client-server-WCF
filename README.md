@@ -3,3 +3,4 @@
 * HotelFA_WCF - проект DLL службы
 * HotelFA_WCF_client - консольный клиент
 * HotelFA_WCF_Host - хост службы
+* Client.py – клиент на языке python

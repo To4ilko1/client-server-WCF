@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WorkClasses" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/HotelFA_WCF" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWorkClasses_getCurrentUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCurrentUser" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getCurrentUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCurrentUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrders" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getOrdersByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrdersByDate" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getOrdersByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrdersByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_changePwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:changePwd" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_changePwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changePwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getPersons_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPersons" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getPersons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPersonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_addOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:addOrder" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_addOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_addReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:addReview" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_addReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_addPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:addPerson" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_addPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_addAnimal_InputMessage">
+    <wsdl:part name="parameters" element="tns:addAnimal" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_addAnimal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addAnimalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_addMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:addMessage" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_addMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_user_auth_InputMessage">
+    <wsdl:part name="parameters" element="tns:user_auth" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_user_auth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:user_authResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:logout" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:logoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getAnimals_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAnimals" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getAnimals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAnimalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getAnimalTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAnimalTypes" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getAnimalTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAnimalTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getAnimalsInHotel_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAnimalsInHotel" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getAnimalsInHotel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAnimalsInHotelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:getReview" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getJournal_InputMessage">
+    <wsdl:part name="parameters" element="tns:getJournal" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getJournal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getJournalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getChatMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:getChatMessages" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getChatMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getChatMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getChatMessagesByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:getChatMessagesByDate" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getChatMessagesByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getChatMessagesByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getAccountWorker_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountWorker" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getAccountWorker_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountWorkerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAccount" />
+  </wsdl:message>
+  <wsdl:message name="IWorkClasses_getAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWorkClasses">
+    <wsdl:operation name="getCurrentUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/getCurrentUser" message="tns:IWorkClasses_getCurrentUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/getCurrentUserResponse" message="tns:IWorkClasses_getCurrentUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/getOrders" message="tns:IWorkClasses_getOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/getOrdersResponse" message="tns:IWorkClasses_getOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrdersByDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/getOrdersByDate" message="tns:IWorkClasses_getOrdersByDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/getOrdersByDateResponse" message="tns:IWorkClasses_getOrdersByDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changePwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/changePwd" message="tns:IWorkClasses_changePwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/changePwdResponse" message="tns:IWorkClasses_changePwd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPersons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/getPersons" message="tns:IWorkClasses_getPersons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/getPersonsResponse" message="tns:IWorkClasses_getPersons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/addOrder" message="tns:IWorkClasses_addOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/addOrderResponse" message="tns:IWorkClasses_addOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/addReview" message="tns:IWorkClasses_addReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/addReviewResponse" message="tns:IWorkClasses_addReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/addPerson" message="tns:IWorkClasses_addPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/addPersonResponse" message="tns:IWorkClasses_addPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addAnimal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/addAnimal" message="tns:IWorkClasses_addAnimal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/addAnimalResponse" message="tns:IWorkClasses_addAnimal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/addMessage" message="tns:IWorkClasses_addMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/addMessageResponse" message="tns:IWorkClasses_addMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="user_auth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/user_auth" message="tns:IWorkClasses_user_auth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/user_authResponse" message="tns:IWorkClasses_user_auth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/logout" message="tns:IWorkClasses_logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/logoutResponse" message="tns:IWorkClasses_logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAnimals">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/getAnimals" message="tns:IWorkClasses_getAnimals_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/getAnimalsResponse" message="tns:IWorkClasses_getAnimals_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAnimalTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/getAnimalTypes" message="tns:IWorkClasses_getAnimalTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/getAnimalTypesResponse" message="tns:IWorkClasses_getAnimalTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAnimalsInHotel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/getAnimalsInHotel" message="tns:IWorkClasses_getAnimalsInHotel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/getAnimalsInHotelResponse" message="tns:IWorkClasses_getAnimalsInHotel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/getReview" message="tns:IWorkClasses_getReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/getReviewResponse" message="tns:IWorkClasses_getReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getJournal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/getJournal" message="tns:IWorkClasses_getJournal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/getJournalResponse" message="tns:IWorkClasses_getJournal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getChatMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/getChatMessages" message="tns:IWorkClasses_getChatMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/getChatMessagesResponse" message="tns:IWorkClasses_getChatMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getChatMessagesByDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/getChatMessagesByDate" message="tns:IWorkClasses_getChatMessagesByDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/getChatMessagesByDateResponse" message="tns:IWorkClasses_getChatMessagesByDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccountWorker">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/getAccountWorker" message="tns:IWorkClasses_getAccountWorker_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/getAccountWorkerResponse" message="tns:IWorkClasses_getAccountWorker_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkClasses/getAccount" message="tns:IWorkClasses_getAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkClasses/getAccountResponse" message="tns:IWorkClasses_getAccount_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWorkClasses" type="tns:IWorkClasses">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCurrentUser">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/getCurrentUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrders">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/getOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrdersByDate">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/getOrdersByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePwd">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/changePwd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPersons">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/getPersons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addOrder">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/addOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addReview">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/addReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPerson">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/addPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAnimal">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/addAnimal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addMessage">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/addMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="user_auth">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/user_auth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAnimals">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/getAnimals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAnimalTypes">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/getAnimalTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAnimalsInHotel">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/getAnimalsInHotel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReview">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/getReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getJournal">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/getJournal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getChatMessages">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/getChatMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getChatMessagesByDate">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/getChatMessagesByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountWorker">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/getAccountWorker" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccount">
+      <soap:operation soapAction="http://tempuri.org/IWorkClasses/getAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WorkClasses">
+    <wsdl:port name="BasicHttpBinding_IWorkClasses" binding="tns:BasicHttpBinding_IWorkClasses">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/HotelFA_WCF/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
